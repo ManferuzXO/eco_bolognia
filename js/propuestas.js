@@ -23,16 +23,17 @@ const PROPUESTAS = {
     titulo: 'Mejora de plazas, parques y espacios públicos',
     desc:   'Las intervenciones moradas buscan recuperar y mejorar el espacio público de Bolognía: plazas, parques y áreas verdes. Cada intervención incorpora murales de fauna local, vegetación nativa y mobiliario urbano que refuerzan la identidad del barrio y el vínculo con el entorno natural.',
     items: [
-      { img: 'propuestas/m1.png',    titulo: 'Plaza de los Leones',           desc: 'Recuperación del rol central del espacio con mejoras de iluminación, verde y activación cultural.' },
-      { img: 'propuestas/m2.png',    titulo: 'Plaza de la Piedra',            desc: 'Redesign con mobiliario en piedra local, arbolado nativo y superficies permeables.' },
-      { img: 'propuestas/m3.png',    titulo: 'Parque Integral',               desc: 'Parque accesible con áreas de juego, descanso, vegetación y arte urbano para todos los vecinos.' },
-      { img: 'propuestas/m4.png',    titulo: 'Área de recreación',            desc: 'Área conectada con el área natural protegida, con murales, caminos ecológicos y vegetación nativa.' },
-      { img: 'propuestas/1 FINAL GR-01.jpeg',    titulo: 'Ascenso al Eco de Bolognía',    desc: 'Recorrido con murales, vegetación, miradores y espacios de contemplación hacia el área natural.' },
-      { img: 'propuestas/m5.png',    titulo: 'Ingreso al Bosque de Bolognía', desc: 'Muro de tapia pisada y gaviones de piedra que crean una transición entre el barrio y el área natural.' },
+      { img: 'propuestas/m1.png',    titulo: 'Plaza de los Leones',           desc: 'Intervención en la Plaza de los Leones para recuperar su rol como espacio central del barrio. Incluye mejoras de iluminación, mobiliario urbano, zonas verdes y activación cultural con murales y elementos de arte público que dialogan con la fauna de Bolognía.' },
+      { img: 'propuestas/m2.png',    titulo: 'Plaza de la Piedra',            desc: 'Reapropiación de la histórica plaza de la piedra con la reforestacíon, murlismo y aplicación de losetas podotáctiles.' },
+      { img: 'propuestas/m3.png',    titulo: 'Parque Integral',               desc: 'Parque integral que articula diferentes escalas del espacio público, integrando áreas de juego, descanso, vegetación y arte urbano. Diseñado para ser accesible a todos los habitantes del barrio, con especial atención a adultos mayores y niños.' },
+      { img: 'propuestas/m4.png',    titulo: 'Parque Recreativo',            desc: 'Este parque es un propuesta ubicada sobre un área residual en la zona, cercada al área protegida. Su objetivo es crear un espacio mas para el ocio, la información (con murales) y el descanso de quien lo visite.' },
+      { img: 'propuestas/MURAL Colibri.png', titulo: 'Mural del Gigante', desc:'Este mural del Colibrí gigante, recupera el espacio público y residual que exitia en la plaza de los leones. Creando un punto de parada y observación de información para los lugareños y visitantes.'},
+      { img: 'propuestas/2 CALLEJON -01.jpeg', titulo: 'Mural en los callejones 4 y 5',               desc: 'Intervención de mural artístico en los callejones del barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.' },
+      { img: 'propuestas/4 MURAL FINAL.png', titulo:'Mural Informativo', desc:'Este mural/panel informativo tiene el objetivo de darle una vista previa al visitante o vecino que haya llegado en Puma Katari, trufi o minibus, de que a pocos pasos suyos se encuentran el área protegida de Bolognia y pueda visitarlo.'},  
+      { img: 'propuestas/1 FINAL GR-01.jpeg',    titulo: 'Ascenso al Pasaje de La Queñua',    desc: 'La intervención en las graderías que dirigen hacia el ingreso del área protegida, tiene el fin de ser llamativo a quien lo vea al pasar, invitándo a ascender por las graderias al usuario, por medio del arte, la vegetación y la iluminación.' },
+      { img: 'propuestas/m5.png',    titulo: 'Ingreso al Area Protegida', desc: 'El trabajo realizado en la entrada al bosque de Bolognia, trata de integrar la tierra, piedras y colores propios del sitio. Conformandose así intervenciones artísticas sobre muros de Tapia Pisada, el uso de vegetación y monolitos tallados en piedra, también la incorporación de muros Gaviones de piedra en lugares con tendencia a deslizamiento y avasallamiento.' },
       { img: 'propuestas/5 MURAL FINAL.png', titulo: 'Mural del Área de recreación y conexión con el área protegida', desc: 'Intervención de mural artístico situado en el area de recreación en el barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.'},
-      { img: 'propuestas/4 MURAL FINAL.png', titulo:'Mural por la Plaza de la Piedra', desc:'Intervención de mural artístico en la Plaza de la piedra, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.'},  
-      { img: 'propuestas/2 CALLEJON -01.jpeg', titulo: 'Mural por los Callejones',               desc: 'Intervención de mural artístico en el barrio incorporando fauna nativa andina y elementos del paisaje local.' },
-      
+
       
     ]
   },
