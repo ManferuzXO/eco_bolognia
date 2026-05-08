@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eco en Bolognia</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="strip">
+  <span style="background:#8faa5c"></span><span style="background:#b09c85"></span>
+  <span style="background:#9e5447"></span><span style="background:#d4906e"></span>
+</div>
+
+<nav>
+  <a class="nav-logo" href="#">ECO BOLOGNIA</a>
+  <ul class="nav-links">
+    <li><a href="#modelo">Modelo Interactivo</a></li>
+    <li><a href="#fauna">Fauna</a></li>
+    <li><a href="#propuestas">Propuestas</a></li>
+    <li><a href="#paneles">Paneles</a></li>
+    <li><a href="#acerca">Acerca de</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menú" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="#modelo"     onclick="toggleMenu()">Modelo Interactivo</a>
+  <a href="#fauna"      onclick="toggleMenu()">Fauna</a>
+  <a href="#propuestas" onclick="toggleMenu()">Propuestas</a>
+  <a href="#paneles"    onclick="toggleMenu()">Paneles</a>
+  <a href="#acerca"     onclick="toggleMenu()">Acerca de</a>
+</div>
+
+<section class="hero">
+  <p class="hero-eyebrow">URBANISMO · UT302</p>
+  <h1><em>Sutura</em><br>del eco en BOLOGNIA</h1>
+  <p class="hero-sub">Sutura Urbana</p>
+  <p class="hero-sub">Univ. Mayra Huancollo Choque - FAADU - ARQUITECTURA</p>
+  <p class="hero-desc">¿DE QUE TRATA EL PROYECTO?
+Es una estrategia de acupuntura urbana que combate la desmembración de la zona mediante una arteria amarilla de losetas podotáctiles y arte. El proyecto rehabilita plazas, parques y el Pasaje de la Queñua, utilizando el arte y el muralismo para "coser" el tejido vecinal con el área protegida. Dando la bienvenida a visitantes y vecinos hacia el Area protegida de Bolognia.</p>
+  <div class="scroll-cue">Explorar</div>
+</section>
+
+<!-- ═══════════════ MODELO 3D ═══════════════ -->
+<section id="modelo">
+  <div class="model-header">
+    <div>
+      <div class="sec-title light"><em>Modelo</em><br>3D Interactivo</div>
+      <div class="model-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#8faa5c"></div>Fauna</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#7c5cbf"></div>Proyectos</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e6b800"></div>Tejido Podotactil</div>
+        <div class="legend-item"><div class="legend-line-red"></div>Áreas Intervenidas</div>
+      </div>
+    </div>
+    <div class="model-hint">Haz clic en los puntos<br>para ver información</div>
+  </div>
+
+  <div class="model-wrap">
+    <model-viewer
+      id="mv"
+      src="Bolognia.glb"
+      alt="Modelo 3D Eco en Bologna"
+      camera-controls
+      shadow-intensity="0.3"
+      exposure="0.9"
+      environment-image="neutral"
+      loading="eager"
+      min-field-of-view="1deg"
+      max-field-of-view="120deg"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'%3E%3Crect fill='%2316100a' width='1200' height='700'/%3E%3Ctext x='600' y='340' text-anchor='middle' font-family='Georgia,serif' font-size='20' fill='%23b09c85' letter-spacing='3'%3ECargando modelo...%3C/text%3E%3C/svg%3E"
+    >
+
+      <!-- PUNTOS VERDES — FAUNA -->
+      <div class="hs-wrapper" slot="hotspot-1" data-animal="animal-01" data-position="357.5554m 50.18m -3.5326m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-01">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-01">Cargando…</div><div class="hs-sci" id="sci-animal-01">—</div><button class="hs-audio" id="audio-animal-01" onclick="toggleAudio('animal-01',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-2" data-animal="animal-02" data-position="352.4066m 64.2214m -103.4118m" data-normal="0m 0m 0.0032m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-02">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-02">Cargando…</div><div class="hs-sci" id="sci-animal-02">—</div><button class="hs-audio" id="audio-animal-02" onclick="toggleAudio('animal-02',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-3" data-animal="animal-03" data-position="361.0361m 15.83m -200.342m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-03">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-03">Cargando…</div><div class="hs-sci" id="sci-animal-03">—</div><button class="hs-audio" id="audio-animal-03" onclick="toggleAudio('animal-03',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-6" data-animal="animal-06" data-position="397.5679m 47.29m -420.0407m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-06">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-06">Cargando…</div><div class="hs-sci" id="sci-animal-06">—</div><button class="hs-audio" id="audio-animal-06" onclick="toggleAudio('animal-06',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-7" data-animal="animal-07" data-position="382.956m 39.89m -339.735m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-07">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-07">Cargando…</div><div class="hs-sci" id="sci-animal-07">—</div><button class="hs-audio" id="audio-animal-07" onclick="toggleAudio('animal-07',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-8" data-animal="animal-08" data-position="394.1211m 18.54m -270.0158m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-08">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-08">Cargando…</div><div class="hs-sci" id="sci-animal-08">—</div><button class="hs-audio" id="audio-animal-08" onclick="toggleAudio('animal-08',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-9" data-animal="animal-09" data-position="392.4884m 15.83m -238.8204m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-09">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-09">Cargando…</div><div class="hs-sci" id="sci-animal-09">—</div><button class="hs-audio" id="audio-animal-09" onclick="toggleAudio('animal-09',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-11" data-animal="animal-11" data-position="402.2969m 1.3m -65.0325m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-11">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-11">Cargando…</div><div class="hs-sci" id="sci-animal-11">—</div><button class="hs-audio" id="audio-animal-11" onclick="toggleAudio('animal-11',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-21" data-animal="animal-21" data-position="490.3112m 6.9m -295.7378m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-21">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-21">Cargando…</div><div class="hs-sci" id="sci-animal-21">—</div><button class="hs-audio" id="audio-animal-21" onclick="toggleAudio('animal-21',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-22" data-animal="animal-22" data-position="471.7182m 10m -317.182m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-22">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-22">Cargando…</div><div class="hs-sci" id="sci-animal-22">—</div><button class="hs-audio" id="audio-animal-22" onclick="toggleAudio('animal-22',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-24" data-animal="animal-24" data-position="482.1742m 18.54m -422.0685m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-24">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-24">Cargando…</div><div class="hs-sci" id="sci-animal-24">—</div><button class="hs-audio" id="audio-animal-24" onclick="toggleAudio('animal-24',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-25" data-animal="animal-25" data-position="536.3689m 0m -364.6355m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-25">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-25">Cargando…</div><div class="hs-sci" id="sci-animal-25">—</div><button class="hs-audio" id="audio-animal-25" onclick="toggleAudio('animal-25',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-26" data-animal="animal-26" data-position="567.2747m 0m -237.3508m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-26">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-26">Cargando…</div><div class="hs-sci" id="sci-animal-26">—</div><button class="hs-audio" id="audio-animal-26" onclick="toggleAudio('animal-26',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-27" data-animal="animal-27" data-position="582.0748m 0m -186.4675m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-27">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-27">Cargando…</div><div class="hs-sci" id="sci-animal-27">—</div><button class="hs-audio" id="audio-animal-27" onclick="toggleAudio('animal-27',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-30" data-animal="animal-30" data-position="618.7364m 0.2m -250.7931m" data-normal="0m 0m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-30">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-30">Cargando…</div><div class="hs-sci" id="sci-animal-30">—</div><button class="hs-audio" id="audio-animal-30" onclick="toggleAudio('animal-30',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-31" data-animal="animal-31" data-position="622.8701m 0.74m -227.7818m" data-normal="0.9659m 0m 0.2588m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-31">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-31">Cargando…</div><div class="hs-sci" id="sci-animal-31">—</div><button class="hs-audio" id="audio-animal-31" onclick="toggleAudio('animal-31',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-32" data-animal="animal-32" data-position="611.8778m 0.686m -108.8703m" data-normal="0.2588m 0m 0.9659m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-32">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-32">Cargando…</div><div class="hs-sci" id="sci-animal-32">—</div><button class="hs-audio" id="audio-animal-32" onclick="toggleAudio('animal-32',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-33" data-animal="animal-33" data-position="610.5295m 1.2m -86.3274m" data-normal="0m 1m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-33">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-33">Cargando…</div><div class="hs-sci" id="sci-animal-33">—</div><button class="hs-audio" id="audio-animal-33" onclick="toggleAudio('animal-33',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-34" data-animal="animal-34" data-position="604.8211m 0.4619m -62.1483m" data-normal="0.2588m 0m 0.9659m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-34">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-34">Cargando…</div><div class="hs-sci" id="sci-animal-34">—</div><button class="hs-audio" id="audio-animal-34" onclick="toggleAudio('animal-34',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-35" data-animal="animal-35" data-position="607.637m 1.2m -43.9411m" data-normal="0m 1m 0m">
+        <div class="hs-dot" onclick="toggleCard(this.parentElement)"></div>
+        <div class="hs-card"><div class="hs-foto" id="foto-animal-35">🐾</div><div class="hs-info"><div class="hs-nombre" id="nombre-animal-35">Cargando…</div><div class="hs-sci" id="sci-animal-35">—</div><button class="hs-audio" id="audio-animal-35" onclick="toggleAudio('animal-35',this)"><svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg> Escuchar</button></div><button class="hs-close" onclick="closeCard(this.closest('.hs-wrapper'))"></button></div>
+      </div>
+
+      <!-- PUNTOS MORADOS — INTERVENCIONES
+           Ahora usan data-tipo, data-imagen, data-titulo, data-desc
+           El onclick llama a abrirModalIntervencion(this.parentElement)
+      -->
+      
+
+      <div class="hs-wrapper" slot="hotspot-m1" data-position="510.5995m 6.6956m -344.0169m" data-normal="0m 0m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/m4.png"
+           data-titulo="Área de recreación y conexión con el área protegida"
+           data-desc="Propuesta de área de recreación conectada directamente con el área natural protegida. Incluye murales temáticos de fauna local, caminos ecológicos, espacios de descanso y vegetación nativa que refuerza la relación entre el barrio y el bosque de Bolognía.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-m2" data-position="508.487m 6.9m -273.7301m" data-normal="0m 0m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/m5.png"
+           data-titulo="Ingreso al Bosque de Bolognía"
+           data-desc="Intervención en el ingreso al Bosque de Bolognía mediante muro de tapia pisada y gaviones de piedra, técnica constructiva andina que integra materiales locales. Crea una transición entre el tejido urbano y el área natural, mejorando la permeabilidad peatonal y la imagen del barrio.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-m3" data-position="536.5529m 6m -282.4163m" data-normal="0m 0m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/1 FINAL GR-01.jpeg"
+           data-titulo="Ascenso al Eco de Bolognía"
+           data-desc="Recorrido de ascenso hacia el eco de Bolognía con murales temáticos, vegetación nativa, miradores y espacios de contemplación que articulan el sistema de plazas y parques del barrio con el área natural protegida.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-m4" data-position="616.9239m 0.2m -244.7559m" data-normal="0m 0m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/m2.png"
+           data-titulo="Plaza de la Piedra"
+           data-desc="Redesign de la Plaza de la Piedra incorporando mobiliario urbano en piedra local, árbolado nativo y superficies permeables. Un espacio de encuentro vecinal que recupera la memoria del material constructivo tradicional de la zona.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-m5" data-position="607.8422m 0m -212.7297m" data-normal="0m 1m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/2 callejon -01.jpeg"
+           data-titulo="Mural por los callejones"
+           data-desc="Intervención de mural artístico en los callejones del barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-m6" data-position="604.5406m 0.2m -69.8878m" data-normal="0m 1m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/m1.png"
+           data-titulo="Plaza de los Leones"
+           data-desc="Intervención en la Plaza de los Leones para recuperar su rol como espacio central del barrio. Incluye mejoras de iluminación, mobiliario urbano, zonas verdes y activación cultural con murales y elementos de arte público que dialogan con la fauna de Bolognía.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      
+      <div class="hs-wrapper" slot="hotspot-m7" data-position="593.3418m 0.3m -346.5342m" data-normal="0m 1m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/m3.png"
+           data-titulo="Parque Integral"
+           data-desc="Parque integral que articula diferentes escalas del espacio público, integrando áreas de juego, descanso, vegetación y arte urbano. Diseñado para ser accesible a todos los habitantes del barrio, con especial atención a adultos mayores y niños.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+    <div class="hs-wrapper" slot="hotspot-m8" data-position="620.2111m 0.7m -235.4534m" data-normal="0m 1m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/4 MURAL FINAL.png"
+           data-titulo="Mural por la Plaza de la Piedra"
+           data-desc="Intervención de mural artístico en la Plaza de la piedra, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+<div class="hs-wrapper" slot="hotspot-m9" data-position="502.969m 6.9m -333.3138m" data-normal="0m 1m 0m"
+           data-tipo="morado"
+           data-imagen="propuestas/5 MURAL FINAL.png"
+           data-titulo="Mural del Área de recreación y conexión con el área protegida"
+           data-desc="Intervención de mural artístico situado en el area de recreación en el barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
+        <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+
+
+      <!-- PUNTOS AMARILLOS — INTERVENCIONES -->
+      <div class="hs-wrapper" slot="hotspot-a1" data-position="497.7446m 6.9m -342.4641m" data-normal="0m 0m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/1a.jpg"
+           data-titulo="Losetas de seguridad — Zona 1"
+           data-desc="Instalación de losetas amarillas con relieve en las veredas del barrio para garantizar la seguridad de personas mayores y personas no videntes. El diseño táctil sigue estándares de accesibilidad universal y permite caminar de manera autónoma por el barrio.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-a2" data-position="488.0873m 7.4954m -273.8071m" data-normal="0m 0m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/2a.jpg"
+           data-titulo="Mejora de calles — Zona 2"
+           data-desc="Intervención de mejora vial en la Zona 2 del barrio, incorporando señalización táctil, pavimento accesible y demarcación clara de cruces peatonales. Busca reducir riesgos para los peatones más vulnerables del barrio.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-a3" data-position="554.7006m 0m -288.0615m" data-normal="0m 0m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/3a.jpg"
+           data-titulo="Corredor seguro — Zona 3"
+           data-desc="Corredor peatonal seguro que conecta equipamientos del barrio mediante una secuencia de veredas con losetas táctiles, iluminación mejorada y señalización. Permite una circulación autónoma y segura para todos los vecinos.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-a4" data-position="608.1101m 0m -257.4758m" data-normal="0m 0m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/4a.jpg"
+           data-titulo="Accesibilidad peatonal — Zona 4"
+           data-desc="Mejora de accesibilidad peatonal en la Zona 4, con rampas, losetas amarillas de relieve y mobiliario urbano adaptado. La intervención prioriza la movilidad de adultos mayores y personas con discapacidad visual.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-a5" data-position="587.1469m 0.3m -353.8599m" data-normal="0m 1m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/3a.jpg"
+           data-titulo="Sendero accesible — Zona 5"
+           data-desc="Sendero accesible que integra la infraestructura vial con el área natural, permitiendo a todos los habitantes llegar al bosque de Bolognía de manera segura y cómoda, con especial atención a personas con movilidad reducida.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-a6" data-position="613.6365m 0m -118.9485m" data-normal="0m 1m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/5a.jpg"
+           data-titulo="Seguridad vial — Zona 6"
+           data-desc="Intervención de seguridad vial en la Zona 6 con tratamiento de intersecciones, losetas táctiles en esquinas, y cruce peatonal elevado. Reduce la velocidad vehicular y protege a los peatones en una de las zonas de mayor tráfico del barrio.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <div class="hs-wrapper" slot="hotspot-a7" data-position="594.2343m 0.1966m -74.0371m" data-normal="0m 1m 0m"
+           data-tipo="amarillo"
+           data-imagen="propuestas/6a.jpg"
+           data-titulo="Vereda accesible — Zona 7"
+           data-desc="Renovación de veredas en la Zona 7 con losetas amarillas de guía y advertencia, garantizando continuidad del recorrido peatonal accesible a lo largo del barrio. Diseñado en coordinación con las demás intervenciones amarillas para formar una red coherente.">
+        <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
+      </div>
+
+      <!-- PUNTO ROJO — ÁREAS INTERVENIDAS -->
+      <div class="hs-wrapper" slot="hotspot-r1" data-position="576.0963m 0m -112.6228m" data-normal="0m 1m 0m">
+        <div class="hs-dot-rojo" onclick="abrirModalRojo()"></div>
+      </div>
+
+    
+</div>
+
+    </model-viewer>
+  </div>
+</section>
+
+<!-- ═══ MODAL INTERVENCIONES (morado/amarillo) ═══ -->
+<div class="interv-modal-overlay" id="intervModalOverlay">
+  <div class="interv-modal morado" id="intervModal">
+    <div class="interv-modal-img-wrap" style="position:relative;">
+      <img id="intervModalImg" src="" alt="" style="width:100%;height:clamp(260px,52vh,520px);object-fit:cover;display:block;transition:transform 0.15s ease;transform-origin:center center;user-select:none;pointer-events:none;">
+      <!-- Zoom con rueda del mouse / pinch táctil -->
+      <button class="interv-modal-close" onclick="cerrarModalIntervencion()" aria-label="Cerrar"></button>
+    </div>
+    <div class="interv-modal-body">
+      <div class="interv-modal-tag morado" id="intervModalTag">Intervención Morada</div>
+      <div class="interv-modal-title" id="intervModalTitle"></div>
+      <p class="interv-modal-desc" id="intervModalDesc"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ FAUNA — tarjetas ═══════════════ -->
+<section id="fauna">
+  <div class="fauna-header">
+    <div class="sec-title dark"><em>Fauna</em><br>del Proyecto</div>
+    <p class="fauna-lead">Cada punto verde en el modelo representa un ave del territorio andino. Descubre su nombre, nombre científico y escucha su canto.</p>
+  </div>
+  <div class="fauna-cards" id="faunaCards">
+
+    <!-- AVE 01 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/1.jpeg" alt="Colibrí Cometa" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 01</div>
+        <div class="fc-nombre">Colibrí Cometa</div>
+        <div class="fc-sci">Sappho Sparganurus</div>
+        <div class="fc-desc">Mide aproximadamente 19 cm. El Colibrí cometa tiene una cola en forma de V con un color bronce–rojizo junto a rayas negras que resaltan ante la luz, su espalda es verde en la parte superior y guinda en la parte inferior. La cola de los machos es más larga que la de las hembras. Se alimenta de plantas nativas con flores de corola corta.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-01',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 02 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/2.jpg" alt="Chaiñita" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 02</div>
+        <div class="fc-nombre">Chaiñita</div>
+        <div class="fc-sci">Spinus atratus</div>
+        <div class="fc-desc">Tiene un tamaño de 12 cm. La Chaiñita es un ave pequeña de color negro oscuro y sus patas hasta el final de la cola son de color amarillo intenso. Se alimenta de semillas en general.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-02',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 03 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/3.jpg" alt="Colibrí Gigante" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 03</div>
+        <div class="fc-nombre">Colibrí Gigante</div>
+        <div class="fc-sci">Patagona gigas</div>
+        <div class="fc-desc">Con 21 cm es el colibrí más grande del mundo. Su plumaje es pardo con manchas blancas en el pecho y cola rojiza. Se alimenta principalmente del néctar de flores grandes y tubulares de plantas nativas andinas.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-03',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 04 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/6.jpg" alt="Piquito de oro" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 04</div>
+        <div class="fc-nombre">Piquito de oro</div>
+        <div class="fc-sci">Catamenia analis</div>
+        <div class="fc-desc">Ave de 11 a 12 cm. El macho presenta plumaje gris con vientre rojizo y pico amarillo brillante característico. La hembra es más opaca con estrías. Se alimenta principalmente de semillas de gramíneas y hierbas silvestres.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-06',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 05 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/7.jpg" alt="Alkamari" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 05</div>
+        <div class="fc-nombre">Alkamari</div>
+        <div class="fc-sci">Phalcoboenus megalopterus</div>
+        <div class="fc-desc">Mide entre 49 y 54 cm. Es una rapaz andina de gran tamaño con plumaje negro y blanco, cara y patas de color naranja vivo. Se alimenta de carroña, insectos, pequeños vertebrados y huevos de otras aves.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-07',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 06 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/8.jpg" alt="Pichitanka" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 06</div>
+        <div class="fc-nombre">Pichitanka</div>
+        <div class="fc-sci">Zonotrichia capensis</div>
+        <div class="fc-desc">Mide entre 13 y 15 cm. Ave muy común en Bolivia con corona a rayas negras y grises, collar rojizo y pecho gris. Es un ave muy adaptable que vive en jardines urbanos. Se alimenta de semillas e insectos.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-08',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 07 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/9.jpg" alt="Conirrostro cinereo" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 07</div>
+        <div class="fc-nombre">Conirrostro cinereo</div>
+        <div class="fc-sci">Conistorum cinereum</div>
+        <div class="fc-desc">Pequeña ave de 13 cm de coloración gris uniforme con pico largo y curvado. Habita en arbustos y matorrales andinos. Se alimenta principalmente de néctar de flores, complementando con insectos pequeños.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-09',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 08 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/11.jpg" alt="Zenaida" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 08</div>
+        <div class="fc-nombre">Zenaida</div>
+        <div class="fc-sci">Zenaida auriculata</div>
+        <div class="fc-desc">Mide entre 23 y 25 cm. Paloma de coloración rosada en el pecho con manchas negras en las alas. Es una de las palomas más comunes de los Andes bolivianos. Se alimenta de semillas y granos que encuentra en el suelo.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-11',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 09 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/21.jpg" alt="Colibrí rutilante" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 09</div>
+        <div class="fc-nombre">Colibrí rutilante</div>
+        <div class="fc-sci">Colibri coruscans</div>
+        <div class="fc-desc">Mide entre 13 y 14 cm. Colibrí de color azul violáceo brillante con garganta azul turquesa iridiscente. Es uno de los colibríes más llamativos de la región andina. Se alimenta del néctar de flores tubulares.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-21',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 10 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/22.jpg" alt="Mirlo grande" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 10</div>
+        <div class="fc-nombre">Mirlo grande</div>
+        <div class="fc-sci">Turdus fuscater</div>
+        <div class="fc-desc">Mide entre 28 y 30 cm, es el más grande de los mirlos andinos. Plumaje negro uniforme con pico y anillo ocular de color amarillo intenso. Su canto melodioso es característico en los bosques andinos y parques urbanos.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-22',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 11 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/24.jpg" alt="Dormilona cenicienta" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 11</div>
+        <div class="fc-nombre">Dormilona cenicienta</div>
+        <div class="fc-sci">Muscisaxicola cinereus</div>
+        <div class="fc-desc">Tiene un tamaño entre 14,5 cm a 15,5 cm, es de color gris y negro, siendo su pecho su distintivo, pues es de color blanco. Se alimenta de insectos y hace sus nidos en forma de copa, entre las rocas.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-24',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 12 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/27.jpg" alt="Jilguero vientre amarillo" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 12</div>
+        <div class="fc-nombre">Jilguero vientre amarillo</div>
+        <div class="fc-sci">Spinus xanthogastrus</div>
+        <div class="fc-desc">Tiene un tamaño de 10 cm. El Jilguero Vientre Amarillo es un ave pequeña con un pico de color negro y grueso, su espalda negra y con el pecho e inicio de su cola amarillo. Se alimenta de semillas y ocasionalmente de insectos.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-27',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 13 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/30.jpg" alt="Sinsonte castaño" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 13</div>
+        <div class="fc-nombre">Sinsonte castaño</div>
+        <div class="fc-sci">Mimus dorsalis</div>
+        <div class="fc-desc">Mide aproximadamente 24 cm. El Sinsonte castaño es un ave de gran tamaño, tiene una ceja blanca sobre su antifaz negro alrededor de los ojos, su espalda es marrón y su cola tiene dos bandas blancas. Es un ave notoria y fácil de distinguir, debido a su canto.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-30',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 14 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/32.jpg" alt="Chubta" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 14</div>
+        <div class="fc-nombre">Chubta</div>
+        <div class="fc-sci">Phrygilus punensis</div>
+        <div class="fc-desc">Mide aproximadamente 15 cm. Tiene una capucha negra-grisácea, su cuerpo es de color amarillo-anaranjado con alas plomizas y jaspeadas con blanco, tiene un pico grande y grueso. Se alimenta de todo tipo de frutos, insectos, granos y semillas.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-32',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 15 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/33.jpg" alt="Chiguanco" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 15</div>
+        <div class="fc-nombre">Chiguanco</div>
+        <div class="fc-sci">Turdus chiguanco</div>
+        <div class="fc-desc">Mide aproximadamente 24 cm. Tiene un plumaje café negruzco con pico y patas de color amarillo y un anillo amarillo anaranjado brillante alrededor de sus ojos. Se alimenta de lombrices, insectos, arañas, frutas y pequeños vertebrados.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-33',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+    <!-- AVE 16 -->
+    <div class="fauna-card">
+      <img class="fc-img" src="fotos/35.jpg" alt="Paloma Moteada" loading="lazy">
+      <div class="fc-body">
+        <div class="fc-num">Ave 16</div>
+        <div class="fc-nombre">Paloma Moteada</div>
+        <div class="fc-sci">Patagioenas maculosa</div>
+        <div class="fc-desc">Mide aproximadamente 32 cm. La Paloma Moteada, de similar tamaño a la paloma común, es un poco más robusta, su plumaje es plomizo-marrón y sus alas tienen motas y líneas blancas. Se alimenta de una amplia variedad de granos que encuentra en el suelo.</div>
+        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-35',this)">
+          <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+          Escuchar canto
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ PROPUESTAS ═══════════════ -->
+<section id="propuestas">
+  <div class="prop-header">
+    <div class="sec-title tierra"><em>Propuestas</em><br>de Intervención</div>
+    <p class="prop-lead">El proyecto se articula mediante dos ejes estratégicos:</p>
+    <p class="prop-lead">1. las intervenciones moradas, enfocadas en la revitalización de plazas,parques, callejones, areas residuales, ingresos y graderias.</p>
+    <p class="prop-lead">2. Las intervenciones amarillas, destinadas a corredores con losetas podotáctiles para el usuario visitante o propio del lugar..</p>
+</div>
+
+  <div class="prop-grid">
+    <!-- CARD MORADA -->
+    <div class="prop-card morado" onclick="abrirPropModal('morado')">
+      <img class="prop-card-img" src="propuestas/Morado.png" alt="Intervenciones Moradas">
+      <div class="prop-card-body">
+        <div class="prop-card-tag morado">Intervención Morada</div>
+        <div class="prop-card-title">Mejora de plazas y parques</div>
+        <div class="prop-card-sub">Espacio Público · Infraestructura · 9 intervenciones</div>
+        <div class="prop-card-btn">
+          <svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg>
+          Ver todas
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD AMARILLA -->
+    <div class="prop-card amarillo" onclick="abrirPropModal('amarillo')">
+      <img class="prop-card-img" src="propuestas/1a.jpg" alt="Intervenciones Amarillas">
+      <div class="prop-card-body">
+        <div class="prop-card-tag amarillo">Intervención Amarilla</div>
+        <div class="prop-card-title">Seguridad y accesibilidad vial</div>
+        <div class="prop-card-sub">Movilidad · Accesibilidad Universal</div>
+        <div class="prop-card-btn">
+          <svg viewBox="0 0 10 10" fill="currentColor"><polygon points="0,0 10,5 0,10"/></svg>
+          Ver
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MODAL ÁREAS INTERVENIDAS (rojo — solo texto) ═══ -->
+<div class="interv-modal-overlay" id="rojoModalOverlay">
+  <div class="interv-modal rojo" id="rojoModal">
+    <div class="interv-modal-body">
+      <button class="interv-modal-close" onclick="cerrarModalRojo()" aria-label="Cerrar"></button>
+      <div class="interv-modal-tag rojo">Áreas Intervenidas</div>
+      <div class="interv-modal-title">Tejido/Sutura</div>
+      <div class="interv-modal-desc" id="rojoModalDesc">Tejido/Sutura entre el area protegida y las plazas intervenidas. Unidas por el medio de murales, señalizaciones, losetas podotactiles.
+        Zona de intervención urbana que articula el espacio público con el área natural de Bolognía, integrando fauna, vegetación nativa y arquitectura en una narrativa urbana continua.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ MODAL PROPUESTAS ═══ -->
+<div class="prop-modal-overlay" id="propModalOverlay">
+  <div class="prop-modal" id="propModal">
+    <div class="prop-modal-head">
+      <img class="prop-modal-hero" id="propModalHero" src="" alt="">
+      <div class="prop-modal-head-overlay">
+        <div class="prop-modal-tipo" id="propModalTipo"></div>
+        <div class="prop-modal-titulo" id="propModalTitulo"></div>
+      </div>
+      <button class="prop-modal-close" onclick="cerrarPropModal()" aria-label="Cerrar"></button>
+    </div>
+    <div class="prop-modal-body">
+      <p class="prop-modal-desc-global" id="propModalDesc"></p>
+      <div class="prop-modal-grid" id="propModalGrid"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ PANELES ═══════════════ -->
+<section id="paneles">
+  <div class="paneles-header">
+    <div class="sec-title verde"><em>Paneles Gráficos</em><br>del Proyecto</div>
+    <p class="paneles-lead">- El primer panel presenta el diagnóstico detallado de debilidades y fortalezas de Bolognia.</p>
+    <p class="paneles-lead">- El segundo panel despliega las propuestas urbanísticas diseñadas para resolver dichas problemáticas.</p>
+  </div>
+
+  <div class="paneles-grid">
+
+    <!-- PANEL 1 -->
+    <div class="panel-thumb" data-src="paneles/panel1.pdf" data-label="Panel 01 — Diagnóstico" onclick="abrirPanel(0)">
+  <img src="paneles/preview1.jpg" alt="Panel 01" loading="lazy">
+  <div class="panel-thumb-overlay"><span class="panel-thumb-label">Panel 01 — Diagnóstico</span></div>
+  <div class="panel-thumb-zoom">📄</div>
+</div>
+
+    <!-- PANEL 2 -->
+    <div class="panel-thumb" data-src="paneles/panel2.pdf" data-label="Panel 02 — Propuestas" onclick="abrirPanel(1)">
+      <img src="paneles/preview2.jpg" alt="Panel 02" loading="lazy">
+      <div class="panel-thumb-overlay"><span class="panel-thumb-label">Panel 02 — Propuestas</span></div>
+      <div class="panel-thumb-zoom">📄</div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MODAL VISOR PANELES -->
+<div class="panel-modal-overlay" id="panelModalOverlay">
+  <div class="panel-modal">
+    <button class="panel-modal-close" onclick="cerrarPanelModal()" aria-label="Cerrar"></button>
+
+    <!-- Navegación prev -->
+    <button class="panel-nav-btn panel-nav-prev" onclick="panelAnterior()" aria-label="Anterior">&#8249;</button>
+
+    <!-- Contenedor imagen con zoom/drag -->
+    <div class="panel-img-container" id="panelImgContainer">
+      <img class="panel-modal-img" id="panelModalImg" src="" alt="">
+    </div>
+
+    <!-- Contenedor PDF -->
+    <div class="panel-pdf-container" id="panelPdfContainer">
+      <iframe class="panel-pdf-iframe" id="panelPdfIframe" src="" title="Panel PDF"></iframe>
+    </div>
+
+    <!-- Navegación next -->
+    <button class="panel-nav-btn panel-nav-next" onclick="panelSiguiente()" aria-label="Siguiente">&#8250;</button>
+
+    <!-- Controles de zoom -->
+    <div class="panel-modal-controls">
+      <button class="panel-ctrl-btn" onclick="zoomPanel(-1)" title="Alejar (−)">−</button>
+      <span class="panel-ctrl-label" id="panelZoomLabel">100%</span>
+      <button class="panel-ctrl-btn" onclick="resetPanelZoom()" title="Restablecer (0)" style="font-size:0.7rem;">↺</button>
+      <button class="panel-ctrl-btn" onclick="zoomPanel(1)" title="Acercar (+)">+</button>
+    </div>
+
+    <div class="panel-modal-footer" id="panelModalFooter">Panel 1 / 6</div>
+  </div>
+</div>
+
+<footer id="acerca">
+  <div>
+    <div class="flogo"><em>Eco</em> en Bolognía</div>
+    <p style="margin-top:0.5rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--crema);font-weight:300;">FAADU - ARQUITECTURA</p>
+  </div>
+  <div class="finfo">urbanismo UT302<br>Univ. Mayra Huancollo Choque</div>
+</footer>
+
+<script src="js/animales.js"></script>
+<script src="js/propuestas.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/hotspots.js"></script>
+<script src="js/fauna.js"></script>
+<script src="js/paneles.js"></script>
+
+</body>
+</html>
