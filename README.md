@@ -222,6 +222,15 @@ Seguridad y accesibilidad en calles y veredas mediante **losetas con relieve tá
 | **Ubicación** | Barrio Bolognía, La Paz, Bolivia |
 | **Área de estudio** | Zona de Bolognía y su área natural protegida |
 
+### 💻 Colaborador Web
+
+| Campo | Detalle |
+|-------|---------|
+| **Universidad** | Universidad Mayor de San Andrés (UMSA) |
+| **Facultad** | FCPN — Facultad de Ciencias Puras y Naturales |
+| **Carrera** | Informática |
+| **Colaborador** | Manuel Alejandro Fernandez Uzquiano |
+
 ---
 
 ## 🔮 Roadmap
