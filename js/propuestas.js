@@ -69,7 +69,7 @@ function abrirPropModal(tipo) {
          data-titulo="${item.titulo}"
          data-desc="${item.desc}">
       <div class="prop-item-img-wrap">
-        <img src="${item.img}" alt="${item.titulo}" loading="lazy">
+        <img src="${item.img}" alt="${item.titulo}" loading="lazy" decoding="async">
         <div class="prop-item-zoom-hint">🔍 Ver en detalle</div>
       </div>
       <div class="prop-modal-item-body">
