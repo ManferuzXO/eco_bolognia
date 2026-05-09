@@ -272,7 +272,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
            data-tipo="morado"
            data-imagen="propuestas/MURAL Colibri.png"
            data-titulo="Mural del Gigante"
-           data-desc="Este mural del Colibrí gigante, recupera el espacio público y residual que exitia en la plaza de los leones. Creando un punto de parada y observación de información para los lugareños y visitantes.">
+           data-desc="Este mural del Colibrí gigante, recupera el espacio público y residual que existía en la plaza de los leones. Creando un punto de parada y observación de información para los lugareños y visitantes.">
         <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
       </div>
 
@@ -372,14 +372,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
   <div class="fauna-cards" id="faunaCards">
 
     <!-- AVE 01 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/1.jpeg" alt="Colibrí Cometa" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-01','Ave 01','Colibrí Cometa','Sappho Sparganurus','fotos/1.jpeg','Mide aproximadamente 19 cm. El Colibrí cometa tiene una cola en forma de V con un color bronce–rojizo junto a rayas negras que resaltan ante la luz, su espalda es verde en la parte superior y guinda en la parte inferior. La cola de los machos es más larga que la de las hembras. Se alimenta de plantas nativas con flores de corola corta.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/1.jpeg" alt="Colibrí Cometa" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 01</div>
         <div class="fc-nombre">Colibrí Cometa</div>
         <div class="fc-sci">Sappho Sparganurus</div>
-        <div class="fc-desc">Mide aproximadamente 19 cm. El Colibrí cometa tiene una cola en forma de V con un color bronce–rojizo junto a rayas negras que resaltan ante la luz, su espalda es verde en la parte superior y guinda en la parte inferior. La cola de los machos es más larga que la de las hembras. Se alimenta de plantas nativas con flores de corola corta.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-01',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-01',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -387,14 +387,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 02 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/2.jpg" alt="Chaiñita" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-02','Ave 02','Chaiñita','Spinus atratus','fotos/2.jpg','Tiene un tamaño de 12 cm. La Chaiñita es un ave pequeña de color negro oscuro y sus patas hasta el final de la cola son de color amarillo intenso. Se alimenta de semillas en general.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/2.jpg" alt="Chaiñita" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 02</div>
         <div class="fc-nombre">Chaiñita</div>
         <div class="fc-sci">Spinus atratus</div>
-        <div class="fc-desc">Tiene un tamaño de 12 cm. La Chaiñita es un ave pequeña de color negro oscuro y sus patas hasta el final de la cola son de color amarillo intenso. Se alimenta de semillas en general.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-02',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-02',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -402,14 +402,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 03 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/3.jpg" alt="Colibrí Gigante" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-03','Ave 03','Colibrí Gigante','Patagona gigas','fotos/3.jpg','Con 21 cm es el colibrí más grande del mundo. Su plumaje es pardo con manchas blancas en el pecho y cola rojiza. Se alimenta principalmente del néctar de flores grandes y tubulares de plantas nativas andinas.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/3.jpg" alt="Colibrí Gigante" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 03</div>
         <div class="fc-nombre">Colibrí Gigante</div>
         <div class="fc-sci">Patagona gigas</div>
-        <div class="fc-desc">Con 21 cm es el colibrí más grande del mundo. Su plumaje es pardo con manchas blancas en el pecho y cola rojiza. Se alimenta principalmente del néctar de flores grandes y tubulares de plantas nativas andinas.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-03',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-03',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -417,14 +417,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 04 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/6.jpg" alt="Piquito de oro" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-06','Ave 04','Piquito de oro','Catamenia analis','fotos/6.jpg','Ave de 11 a 12 cm. El macho presenta plumaje gris con vientre rojizo y pico amarillo brillante característico. La hembra es más opaca con estrías. Se alimenta principalmente de semillas de gramíneas y hierbas silvestres.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/6.jpg" alt="Piquito de oro" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 04</div>
         <div class="fc-nombre">Piquito de oro</div>
         <div class="fc-sci">Catamenia analis</div>
-        <div class="fc-desc">Ave de 11 a 12 cm. El macho presenta plumaje gris con vientre rojizo y pico amarillo brillante característico. La hembra es más opaca con estrías. Se alimenta principalmente de semillas de gramíneas y hierbas silvestres.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-06',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-06',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -432,14 +432,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 05 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/7.jpg" alt="Alkamari" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-07','Ave 05','Alkamari','Phalcoboenus megalopterus','fotos/7.jpg','Mide entre 49 y 54 cm. Es una rapaz andina de gran tamaño con plumaje negro y blanco, cara y patas de color naranja vivo. Se alimenta de carroña, insectos, pequeños vertebrados y huevos de otras aves.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/7.jpg" alt="Alkamari" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 05</div>
         <div class="fc-nombre">Alkamari</div>
         <div class="fc-sci">Phalcoboenus megalopterus</div>
-        <div class="fc-desc">Mide entre 49 y 54 cm. Es una rapaz andina de gran tamaño con plumaje negro y blanco, cara y patas de color naranja vivo. Se alimenta de carroña, insectos, pequeños vertebrados y huevos de otras aves.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-07',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-07',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -447,14 +447,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 06 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/8.jpg" alt="Pichitanka" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-08','Ave 06','Pichitanka','Zonotrichia capensis','fotos/8.jpg','Mide entre 13 y 15 cm. Ave muy común en Bolivia con corona a rayas negras y grises, collar rojizo y pecho gris. Es un ave muy adaptable que vive en jardines urbanos. Se alimenta de semillas e insectos.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/8.jpg" alt="Pichitanka" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 06</div>
         <div class="fc-nombre">Pichitanka</div>
         <div class="fc-sci">Zonotrichia capensis</div>
-        <div class="fc-desc">Mide entre 13 y 15 cm. Ave muy común en Bolivia con corona a rayas negras y grises, collar rojizo y pecho gris. Es un ave muy adaptable que vive en jardines urbanos. Se alimenta de semillas e insectos.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-08',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-08',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -462,14 +462,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 07 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/9.jpg" alt="Conirrostro cinereo" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-09','Ave 07','Conirrostro cinereo','Conistorum cinereum','fotos/9.jpg','Pequeña ave de 13 cm de coloración gris uniforme con pico largo y curvado. Habita en arbustos y matorrales andinos. Se alimenta principalmente de néctar de flores, complementando con insectos pequeños.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/9.jpg" alt="Conirrostro cinereo" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 07</div>
         <div class="fc-nombre">Conirrostro cinereo</div>
         <div class="fc-sci">Conistorum cinereum</div>
-        <div class="fc-desc">Pequeña ave de 13 cm de coloración gris uniforme con pico largo y curvado. Habita en arbustos y matorrales andinos. Se alimenta principalmente de néctar de flores, complementando con insectos pequeños.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-09',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-09',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -477,14 +477,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 08 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/11.jpg" alt="Zenaida" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-11','Ave 08','Zenaida','Zenaida auriculata','fotos/11.jpg','Mide entre 23 y 25 cm. Paloma de coloración rosada en el pecho con manchas negras en las alas. Es una de las palomas más comunes de los Andes bolivianos. Se alimenta de semillas y granos que encuentra en el suelo.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/11.jpg" alt="Zenaida" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 08</div>
         <div class="fc-nombre">Zenaida</div>
         <div class="fc-sci">Zenaida auriculata</div>
-        <div class="fc-desc">Mide entre 23 y 25 cm. Paloma de coloración rosada en el pecho con manchas negras en las alas. Es una de las palomas más comunes de los Andes bolivianos. Se alimenta de semillas y granos que encuentra en el suelo.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-11',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-11',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -492,14 +492,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 09 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/21.jpg" alt="Colibrí rutilante" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-21','Ave 09','Colibrí rutilante','Colibri coruscans','fotos/21.jpg','Mide entre 13 y 14 cm. Colibrí de color azul violáceo brillante con garganta azul turquesa iridiscente. Es uno de los colibríes más llamativos de la región andina. Se alimenta del néctar de flores tubulares.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/21.jpg" alt="Colibrí rutilante" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 09</div>
         <div class="fc-nombre">Colibrí rutilante</div>
         <div class="fc-sci">Colibri coruscans</div>
-        <div class="fc-desc">Mide entre 13 y 14 cm. Colibrí de color azul violáceo brillante con garganta azul turquesa iridiscente. Es uno de los colibríes más llamativos de la región andina. Se alimenta del néctar de flores tubulares.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-21',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-21',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -507,14 +507,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 10 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/22.jpg" alt="Mirlo grande" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-22','Ave 10','Mirlo grande','Turdus fuscater','fotos/22.jpg','Mide entre 28 y 30 cm, es el más grande de los mirlos andinos. Plumaje negro uniforme con pico y anillo ocular de color amarillo intenso. Su canto melodioso es característico en los bosques andinos y parques urbanos.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/22.jpg" alt="Mirlo grande" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 10</div>
         <div class="fc-nombre">Mirlo grande</div>
         <div class="fc-sci">Turdus fuscater</div>
-        <div class="fc-desc">Mide entre 28 y 30 cm, es el más grande de los mirlos andinos. Plumaje negro uniforme con pico y anillo ocular de color amarillo intenso. Su canto melodioso es característico en los bosques andinos y parques urbanos.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-22',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-22',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -522,14 +522,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 11 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/24.jpg" alt="Dormilona cenicienta" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-24','Ave 11','Dormilona cenicienta','Muscisaxicola cinereus','fotos/24.jpg','Tiene un tamaño entre 14,5 cm a 15,5 cm, es de color gris y negro, siendo su pecho su distintivo, pues es de color blanco. Se alimenta de insectos y hace sus nidos en forma de copa, entre las rocas.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/24.jpg" alt="Dormilona cenicienta" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 11</div>
         <div class="fc-nombre">Dormilona cenicienta</div>
         <div class="fc-sci">Muscisaxicola cinereus</div>
-        <div class="fc-desc">Tiene un tamaño entre 14,5 cm a 15,5 cm, es de color gris y negro, siendo su pecho su distintivo, pues es de color blanco. Se alimenta de insectos y hace sus nidos en forma de copa, entre las rocas.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-24',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-24',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -537,14 +537,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 12 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/27.jpg" alt="Jilguero vientre amarillo" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-27','Ave 12','Jilguero vientre amarillo','Spinus xanthogastrus','fotos/27.jpg','Tiene un tamaño de 10 cm. El Jilguero Vientre Amarillo es un ave pequeña con un pico de color negro y grueso, su espalda negra y con el pecho e inicio de su cola amarillo. Se alimenta de semillas y ocasionalmente de insectos.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/27.jpg" alt="Jilguero vientre amarillo" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 12</div>
         <div class="fc-nombre">Jilguero vientre amarillo</div>
         <div class="fc-sci">Spinus xanthogastrus</div>
-        <div class="fc-desc">Tiene un tamaño de 10 cm. El Jilguero Vientre Amarillo es un ave pequeña con un pico de color negro y grueso, su espalda negra y con el pecho e inicio de su cola amarillo. Se alimenta de semillas y ocasionalmente de insectos.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-27',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-27',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -552,14 +552,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 13 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/30.jpg" alt="Sinsonte castaño" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-30','Ave 13','Sinsonte castaño','Mimus dorsalis','fotos/30.jpg','Mide aproximadamente 24 cm. El Sinsonte castaño es un ave de gran tamaño, tiene una ceja blanca sobre su antifaz negro alrededor de los ojos, su espalda es marrón y su cola tiene dos bandas blancas. Es un ave notoria y fácil de distinguir, debido a su canto.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/30.jpg" alt="Sinsonte castaño" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 13</div>
         <div class="fc-nombre">Sinsonte castaño</div>
         <div class="fc-sci">Mimus dorsalis</div>
-        <div class="fc-desc">Mide aproximadamente 24 cm. El Sinsonte castaño es un ave de gran tamaño, tiene una ceja blanca sobre su antifaz negro alrededor de los ojos, su espalda es marrón y su cola tiene dos bandas blancas. Es un ave notoria y fácil de distinguir, debido a su canto.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-30',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-30',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -567,14 +567,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 14 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/32.jpg" alt="Chubta" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-32','Ave 14','Chubta','Phrygilus punensis','fotos/32.jpg','Mide aproximadamente 15 cm. Tiene una capucha negra-grisácea, su cuerpo es de color amarillo-anaranjado con alas plomizas y jaspeadas con blanco, tiene un pico grande y grueso. Se alimenta de todo tipo de frutos, insectos, granos y semillas.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/32.jpg" alt="Chubta" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 14</div>
         <div class="fc-nombre">Chubta</div>
         <div class="fc-sci">Phrygilus punensis</div>
-        <div class="fc-desc">Mide aproximadamente 15 cm. Tiene una capucha negra-grisácea, su cuerpo es de color amarillo-anaranjado con alas plomizas y jaspeadas con blanco, tiene un pico grande y grueso. Se alimenta de todo tipo de frutos, insectos, granos y semillas.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-32',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-32',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -582,14 +582,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 15 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/33.jpg" alt="Chiguanco" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-33','Ave 15','Chiguanco','Turdus chiguanco','fotos/33.jpg','Mide aproximadamente 24 cm. Tiene un plumaje café negruzco con pico y patas de color amarillo y un anillo amarillo anaranjado brillante alrededor de sus ojos. Se alimenta de lombrices, insectos, arañas, frutas y pequeños vertebrados.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/33.jpg" alt="Chiguanco" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 15</div>
         <div class="fc-nombre">Chiguanco</div>
         <div class="fc-sci">Turdus chiguanco</div>
-        <div class="fc-desc">Mide aproximadamente 24 cm. Tiene un plumaje café negruzco con pico y patas de color amarillo y un anillo amarillo anaranjado brillante alrededor de sus ojos. Se alimenta de lombrices, insectos, arañas, frutas y pequeños vertebrados.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-33',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-33',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -597,14 +597,14 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     </div>
 
     <!-- AVE 16 -->
-    <div class="fauna-card">
-      <img class="fc-img" src="fotos/35.jpg" alt="Paloma Moteada" loading="lazy">
+    <div class="fauna-card" onclick="abrirFaunaModal('animal-35','Ave 16','Paloma Moteada','Patagioenas maculosa','fotos/35.jpg','Mide aproximadamente 32 cm. La Paloma Moteada, de similar tamaño a la paloma común, es un poco más robusta, su plumaje es plomizo-marrón y sus alas tienen motas y líneas blancas. Se alimenta de una amplia variedad de granos que encuentra en el suelo.')">
+      <div class="fc-img-wrap"><img class="fc-img" src="fotos/35.jpg" alt="Paloma Moteada" loading="lazy"><div class="fc-zoom-hint">🔍 Ver detalle</div></div>
       <div class="fc-body">
         <div class="fc-num">Ave 16</div>
         <div class="fc-nombre">Paloma Moteada</div>
         <div class="fc-sci">Patagioenas maculosa</div>
-        <div class="fc-desc">Mide aproximadamente 32 cm. La Paloma Moteada, de similar tamaño a la paloma común, es un poco más robusta, su plumaje es plomizo-marrón y sus alas tienen motas y líneas blancas. Se alimenta de una amplia variedad de granos que encuentra en el suelo.</div>
-        <button class="fc-audio-btn" onclick="toggleCardAudio('animal-35',this)">
+      
+        <button class="fc-audio-btn" onclick="event.stopPropagation();toggleCardAudio('animal-35',this)">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
           Escuchar canto
         </button>
@@ -613,6 +613,24 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
 
   </div>
 </section>
+
+<!-- ═══ MODAL FAUNA ═══ -->
+<div class="fauna-modal-overlay" id="faunaModalOverlay" onclick="cerrarFaunaModal(event)">
+  <div class="fauna-modal" id="faunaModal">
+    <button class="fauna-modal-close" onclick="cerrarFaunaModal()" aria-label="Cerrar"></button>
+    <img class="fauna-modal-img" id="faunaModalImg" src="" alt="">
+    <div class="fauna-modal-body">
+      <div class="fauna-modal-num" id="faunaModalNum"></div>
+      <div class="fauna-modal-nombre" id="faunaModalNombre"></div>
+      <div class="fauna-modal-sci" id="faunaModalSci"></div>
+      <p class="fauna-modal-desc" id="faunaModalDesc"></p>
+      <button class="fc-audio-btn" id="faunaModalAudioBtn" onclick="toggleCardAudio(window._faunaModalId, this)">
+        <svg viewBox="0 0 10 10" fill="currentColor" style="width:9px;height:9px"><polygon points="0,0 10,5 0,10"/></svg>
+        Escuchar canto
+      </button>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════════ PROPUESTAS ═══════════════ -->
 <section id="propuestas">

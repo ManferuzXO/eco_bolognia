@@ -27,7 +27,7 @@ const PROPUESTAS = {
       { img: 'propuestas/m2.png',    titulo: 'Plaza de la Piedra',            desc: 'Reapropiación de la histórica plaza de la piedra con la reforestacíon, murlismo y aplicación de losetas podotáctiles.' },
       { img: 'propuestas/m3.png',    titulo: 'Parque Integral',               desc: 'Parque integral que articula diferentes escalas del espacio público, integrando áreas de juego, descanso, vegetación y arte urbano. Diseñado para ser accesible a todos los habitantes del barrio, con especial atención a adultos mayores y niños.' },
       { img: 'propuestas/m4.png',    titulo: 'Parque Recreativo',            desc: 'Este parque es un propuesta ubicada sobre un área residual en la zona, cercada al área protegida. Su objetivo es crear un espacio mas para el ocio, la información (con murales) y el descanso de quien lo visite.' },
-      { img: 'propuestas/MURAL Colibri.png', titulo: 'Mural del Gigante', desc:'Este mural del Colibrí gigante, recupera el espacio público y residual que exitia en la plaza de los leones. Creando un punto de parada y observación de información para los lugareños y visitantes.'},
+      { img: 'propuestas/MURAL Colibri.png', titulo: 'Mural del Gigante', desc:'Este mural del Colibrí gigante, recupera el espacio público y residual que existía en la plaza de los leones. Creando un punto de parada y observación de información para los lugareños y visitantes.'},
       { img: 'propuestas/2 CALLEJON -01.jpeg', titulo: 'Mural en los callejones 4 y 5',               desc: 'Intervención de mural artístico en los callejones del barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.' },
       { img: 'propuestas/4 MURAL FINAL.png', titulo:'Mural Informativo', desc:'Este mural/panel informativo tiene el objetivo de darle una vista previa al visitante o vecino que haya llegado en Puma Katari, trufi o minibus, de que a pocos pasos suyos se encuentran el área protegida de Bolognia y pueda visitarlo.'},  
       { img: 'propuestas/1 FINAL GR-01.jpeg',    titulo: 'Ascenso al Pasaje de La Queñua',    desc: 'La intervención en las graderías que dirigen hacia el ingreso del área protegida, tiene el fin de ser llamativo a quien lo vea al pasar, invitándo a ascender por las graderias al usuario, por medio del arte, la vegetación y la iluminación.' },
@@ -74,7 +74,6 @@ function abrirPropModal(tipo) {
       </div>
       <div class="prop-modal-item-body">
         <div class="prop-modal-item-title">${item.titulo}</div>
-        <div class="prop-modal-item-desc">${item.desc}</div>
       </div>
     </div>
   `).join('');

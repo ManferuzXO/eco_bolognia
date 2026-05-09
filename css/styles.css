@@ -460,15 +460,111 @@ model-viewer {
 }
 .fauna-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(42,31,24,0.15); }
 
-.fc-img { width: 100%; height: 200px; object-fit: cover; display: block; background: linear-gradient(135deg, var(--topo), var(--oscuro)); }
+/* Imagen con hint de zoom superpuesto */
+.fc-img-wrap { position: relative; overflow: hidden; }
+.fc-img { width: 100%; height: 200px; object-fit: cover; display: block; background: linear-gradient(135deg, var(--topo), var(--oscuro)); transition: transform 0.35s ease; }
+.fauna-card:hover .fc-img { transform: scale(1.05); }
+.fc-zoom-hint {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(42,31,24,0.45);
+  color: #fff;
+  font-size: clamp(0.95rem,1.8vw,1.1rem);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.fauna-card:hover .fc-zoom-hint { opacity: 1; }
+
 .fc-img-placeholder { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; font-size: 4rem; background: linear-gradient(135deg, var(--topo)33, var(--crema)); }
-.fc-body { padding: 1.1rem 1.25rem 1.25rem; }
+.fc-body { padding: 1rem 1.25rem 1.15rem; }
 .fc-num { font-size: clamp(0.9rem,1.5vw,1.05rem); letter-spacing: 0.2em; text-transform: uppercase; color: var(--topo); margin-bottom: 0.3rem; }
 .fc-nombre { font-family: 'League Gothic', sans-serif; font-size: 1.5rem; text-transform: uppercase; color: var(--oscuro); line-height: 1; margin-bottom: 0.2rem; }
 .fc-sci { font-size: clamp(1rem,1.8vw,1.15rem); font-style: italic; color: var(--tierra); font-weight: 600; margin-bottom: 0.75rem; }
 .fc-desc { font-size: clamp(1.05rem,2vw,1.2rem); line-height: 1.65; color: var(--texto); font-weight: 400; }
-.fc-audio-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--tierra); border: none; border-radius: 20px; padding: 5px 14px; margin-top: 1rem; cursor: pointer; color: #fff; font-size: clamp(0.9rem,1.6vw,1.05rem); letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Lato', sans-serif; transition: background 0.2s; }
+.fc-audio-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--tierra); border: none; border-radius: 20px; padding: 5px 14px; cursor: pointer; color: #fff; font-size: clamp(0.9rem,1.6vw,1.05rem); letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Lato', sans-serif; transition: background 0.2s; }
 .fc-audio-btn:hover { background: var(--oscuro); } .fc-audio-btn.playing { background: var(--verde); }
+
+/* ════════════════════════════
+   MODAL FAUNA
+════════════════════════════ */
+.fauna-modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 600;
+  background: rgba(42,31,24,0.78);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  align-items: center; justify-content: center;
+  padding: 1rem;
+}
+.fauna-modal-overlay.open { display: flex; }
+
+.fauna-modal {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  width: min(600px, 96vw);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  border-top: 5px solid var(--verde);
+  position: relative;
+  animation: modalIn 0.28s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+.fauna-modal-img {
+  width: 100%; height: clamp(220px, 42vh, 420px);
+  object-fit: cover; display: block; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--topo), var(--oscuro));
+}
+
+.fauna-modal-body {
+  padding: clamp(1rem,4vw,1.75rem);
+  overflow-y: auto;
+}
+
+.fauna-modal-num {
+  font-size: clamp(0.9rem,1.5vw,1.05rem);
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--verde); font-weight: 600; margin-bottom: 0.3rem;
+}
+.fauna-modal-nombre {
+  font-family: 'League Gothic', sans-serif;
+  font-size: clamp(1.8rem,5vw,2.6rem);
+  text-transform: uppercase; color: var(--oscuro); line-height: 1.05;
+  margin-bottom: 0.2rem;
+}
+.fauna-modal-sci {
+  font-size: clamp(1rem,2vw,1.2rem);
+  font-style: italic; color: var(--tierra); font-weight: 600;
+  margin-bottom: 1rem;
+}
+.fauna-modal-desc {
+  font-size: clamp(1.05rem,2vw,1.2rem);
+  line-height: 1.75; color: var(--texto); font-weight: 400;
+  margin-bottom: 1.25rem;
+}
+
+.fauna-modal-close {
+  position: absolute; top: 12px; right: 12px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(42,31,24,0.85);
+  border: 2px solid rgba(255,255,255,0.5);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  z-index: 20; transition: background 0.2s, transform 0.15s;
+}
+.fauna-modal-close:hover { background: var(--oscuro); transform: scale(1.1); }
+.fauna-modal-close::before, .fauna-modal-close::after {
+  content: ''; position: absolute; width: 14px; height: 2px; background: #fff;
+}
+.fauna-modal-close::before { transform: rotate(45deg); }
+.fauna-modal-close::after  { transform: rotate(-45deg); }
+
+@media (max-width: 600px) {
+  .fauna-modal { border-radius: 12px; }
+  .fauna-modal-img { height: clamp(180px, 38vw, 280px); }
+}
 
 /* ════════════════════════════
    SECCIÓN PROPUESTAS
