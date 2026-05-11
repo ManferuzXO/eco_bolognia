@@ -9,7 +9,15 @@
   }
 
   /* Ocultar tras cargar fonts + 1.2s mínimo para que se vea bonito */
-  const minWait   = new Promise(r => setTimeout(r, 1200));
+  const minWait    = new Promise(r => setTimeout(r, 1200));
   const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
   Promise.all([minWait, fontsReady]).then(hideSplash);
 })();
+
+/* ══ SERVICE WORKER — PWA móvil ══ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .catch(err => console.warn('SW no registrado:', err));
+  });
+}
