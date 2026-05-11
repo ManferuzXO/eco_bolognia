@@ -1,7 +1,7 @@
 {
-  "name": "Eco en Bolognía",
-  "short_name": "Eco Bolognía",
-  "description": "Sutura del Eco en Bolognía — Maqueta digital interactiva del proyecto urbano",
+  "name": "Eco en Bolognia",
+  "short_name": "Eco Bolognia",
+  "description": "Sutura del Eco en Bolognia — Maqueta digital interactiva del proyecto urbano",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#f0e8dc",
