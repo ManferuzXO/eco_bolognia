@@ -4,11 +4,52 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Eco en Bolognia</title>
+
+  <!-- ══ PWA / META ══ -->
+  <meta name="description" content="Sutura del Eco en Bolognia — Maqueta digital interactiva del proyecto urbano de acupuntura urbana en el Área Protegida de Bolognia, La Paz."/>
+  <meta name="theme-color" content="#2a1f18"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Eco Bolognia"/>
+
+  <!-- Open Graph (preview al compartir) -->
+  <meta property="og:type"        content="website"/>
+  <meta property="og:title"       content="Eco en Bolognia — Sutura Urbana"/>
+  <meta property="og:description" content="Maqueta digital interactiva: fauna andina, intervenciones urbanas y propuestas de sutura en el Bosquecillo de Bolognia."/>
+  <meta property="og:image"       content="paneles/preview1.jpg"/>
+
+  <!-- Favicons -->
+  <link rel="icon"             href="favicon.svg" type="image/svg+xml"/>
+  <link rel="icon"             href="icons/icon-192.png" sizes="192x192" type="image/png"/>
+  <link rel="apple-touch-icon" href="icons/icon-192.png"/>
+  <link rel="manifest"         href="manifest.json"/>
+
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Lato:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+
+<!-- ══ SPLASH SCREEN ══ -->
+<div id="splash" aria-hidden="true">
+  <div class="splash-inner">
+    <div class="splash-strip">
+      <span style="background:#8faa5c"></span>
+      <span style="background:#b09c85"></span>
+      <span style="background:#9e5447"></span>
+      <span style="background:#d4906e"></span>
+    </div>
+    <div class="splash-logo">
+      <span class="splash-eco">ECO</span>
+      <span class="splash-en">EN</span>
+      <span class="splash-place">BOLOGNIA</span>
+    </div>
+    <div class="splash-sub">Sutura Urbana · FAADU</div>
+    <div class="splash-dots">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
 
 <div class="strip">
   <span style="background:#8faa5c"></span><span style="background:#b09c85"></span>
@@ -63,6 +104,17 @@ Es una estrategia de acupuntura urbana que combate la desmembración de la zona 
     <div class="model-hint">Haz clic en los puntos<br>para ver información</div>
   </div>
 
+  <!-- Barra de progreso de carga del modelo -->
+  <div id="modelProgressBar" class="model-progress-bar">
+    <div class="model-progress-header">
+      <span class="model-progress-label">Cargando modelo 3D</span>
+      <span class="model-progress-pct" id="modelProgressPct">0%</span>
+    </div>
+    <div class="model-progress-track">
+      <div class="model-progress-fill" id="modelProgressFill"></div>
+    </div>
+  </div>
+
   <div class="model-wrap">
     <model-viewer
       id="mv"
@@ -75,7 +127,7 @@ Es una estrategia de acupuntura urbana que combate la desmembración de la zona 
       loading="eager"
       min-field-of-view="1deg"
       max-field-of-view="120deg"
-      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'%3E%3Crect fill='%2316100a' width='1200' height='700'/%3E%3Ctext x='600' y='340' text-anchor='middle' font-family='Georgia,serif' font-size='20' fill='%23b09c85' letter-spacing='3'%3ECargando modelo...%3C/text%3E%3C/svg%3E"
+      poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='700'%3E%3Crect fill='%2316100a' width='1200' height='700'/%3E%3Ctext x='600' y='340' text-anchor='middle' font-family='Georgia%2Cserif' font-size='18' fill='%23b09c85' letter-spacing='4'%3ECargando modelo...%3C/text%3E%3C/svg%3E"
     >
 
       <!-- PUNTOS VERDES — FAUNA -->
@@ -223,7 +275,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
            data-tipo="morado"
            data-imagen="propuestas/2 CALLEJON -01.jpeg"
            data-titulo="Mural en los callejones 4  y 5"
-           data-desc="Intervención de mural artístico en los callejones del barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
+           data-desc="Intervención de mural artístico en los callejones del barrio de Bolognia, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
         <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
       </div>
 
@@ -231,7 +283,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
            data-tipo="morado"
            data-imagen="propuestas/2 CALLEJON -01.jpeg"
            data-titulo="Mural en los callejones 4  y 5"
-           data-desc="Intervención de mural artístico en los callejones del barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
+           data-desc="Intervención de mural artístico en los callejones del barrio de Bolognia, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
         <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
       </div>
 
@@ -239,7 +291,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
            data-tipo="morado"
            data-imagen="propuestas/m1.png"
            data-titulo="Plaza de los Leones"
-           data-desc="Intervención en la Plaza de los Leones para recuperar su rol como espacio central del barrio. Incluye mejoras de iluminación, mobiliario urbano, zonas verdes y activación cultural con murales y elementos de arte público que dialogan con la fauna de Bolognía.">
+           data-desc="Intervención en la Plaza de los Leones para recuperar su rol como espacio central del barrio. Incluye mejoras de iluminación, mobiliario urbano, zonas verdes y activación cultural con murales y elementos de arte público que dialogan con la fauna de Bolognia.">
         <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
       </div>
 
@@ -264,7 +316,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
            data-tipo="morado"
            data-imagen="propuestas/5 MURAL FINAL.png"
            data-titulo="Mural del Área de recreación y conexión con el área protegida"
-           data-desc="Intervención de mural artístico situado en el area de recreación en el barrio de Bolognía, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
+           data-desc="Intervención de mural artístico situado en el area de recreación en el barrio de Bolognia, incorporando fauna nativa andina y elementos del paisaje local para recuperar la identidad cultural del espacio público.">
         <div class="hs-dot-morado" onclick="abrirModalIntervencion(this.parentElement)"></div>
       </div>
 
@@ -316,7 +368,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
            data-tipo="amarillo"
            data-imagen="propuestas/3a.jpg"
            data-titulo="Sendero accesible — Zona 5"
-           data-desc="Sendero accesible que integra la infraestructura vial con el área natural, permitiendo a todos los habitantes llegar al bosque de Bolognía de manera segura y cómoda, con especial atención a personas con movilidad reducida.">
+           data-desc="Sendero accesible que integra la infraestructura vial con el área natural, permitiendo a todos los habitantes llegar al bosque de Bolognia de manera segura y cómoda, con especial atención a personas con movilidad reducida.">
         <div class="hs-dot-amarillo" onclick="abrirModalIntervencion(this.parentElement)"></div>
       </div>
 
@@ -681,7 +733,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
       <div class="interv-modal-tag rojo">Áreas Intervenidas</div>
       <div class="interv-modal-title">Tejido/Sutura</div>
       <div class="interv-modal-desc" id="rojoModalDesc">Tejido/Sutura entre el area protegida y las plazas intervenidas. Unidas por el medio de murales, señalizaciones, losetas podotactiles.
-        Zona de intervención urbana que articula el espacio público con el área natural de Bolognía, integrando fauna, vegetación nativa y arquitectura en una narrativa urbana continua.</div>
+        Zona de intervención urbana que articula el espacio público con el área natural de Bolognia, integrando fauna, vegetación nativa y arquitectura en una narrativa urbana continua.</div>
     </div>
   </div>
 </div>
@@ -720,7 +772,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     <div class="panel-thumb" data-src="paneles/panel1.pdf" data-label="Panel 01 — Diagnóstico" onclick="abrirPanel(0)">
       <img src="paneles/preview1.jpg" alt="Panel 01" loading="lazy">
       <div class="panel-thumb-overlay">
-        <span class="panel-thumb-label">Diagnóstico en Bolognía</span>
+        <span class="panel-thumb-label">Diagnóstico en Bolognia</span>
         <span class="panel-thumb-sub">Análisis urbano · Fortalezas y debilidades</span>
         <div class="panel-thumb-btn">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:8px;height:8px"><polygon points="0,0 10,5 0,10"/></svg>
@@ -734,7 +786,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
     <div class="panel-thumb" data-src="paneles/panel2.pdf" data-label="Panel 02 — Propuestas" onclick="abrirPanel(1)">
       <img src="paneles/preview2.jpg" alt="Panel 02" loading="lazy">
       <div class="panel-thumb-overlay">
-        <span class="panel-thumb-label">Sutura del Eco en Bolognía</span>
+        <span class="panel-thumb-label">Sutura del Eco en Bolognia</span>
         <span class="panel-thumb-sub">Propuestas urbanísticas · Intervenciones</span>
         <div class="panel-thumb-btn">
           <svg viewBox="0 0 10 10" fill="currentColor" style="width:8px;height:8px"><polygon points="0,0 10,5 0,10"/></svg>
@@ -783,7 +835,7 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
 
 <footer id="acerca">
   <div>
-    <div class="flogo"><em>Eco</em> en Bolognía</div>
+    <div class="flogo"><em>Eco</em> en Bolognia</div>
     <p style="margin-top:0.5rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--crema);font-weight:300;">FAADU - ARQUITECTURA</p>
     <p style="margin-top:0.5rem;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--crema);font-weight:300;">FCPN - INFORMÁTICA</p>
   </div>
@@ -799,6 +851,8 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
 <script src="js/hotspots.js"></script>
 <script src="js/fauna.js"></script>
 <script src="js/paneles.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/splash.js"></script>
 
 </body>
 </html>
