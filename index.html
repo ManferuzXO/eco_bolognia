@@ -416,16 +416,17 @@ Conformandose así  intervenciones artísticas sobre muros de Tapia Pisada, el u
 
     </model-viewer>
 
-    <!-- Botón flotante Salir — visible solo en fullscreen, dentro del container -->
-    <button id="fsExitBtn" class="fs-exit-btn" onclick="toggleModelFullscreen()">
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-        <polyline points="8,3 3,3 3,8"/><polyline points="12,3 17,3 17,8"/>
-        <polyline points="8,17 3,17 3,12"/><polyline points="12,17 17,17 17,12"/>
-      </svg>
-      Salir
-    </button>
-
   </div><!-- /modelContainer -->
+
+  <!-- Botón Salir fullscreen — fuera del container para máxima compatibilidad -->
+  <button id="fsExitBtn" class="fs-exit-btn" onclick="toggleModelFullscreen()">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <polyline points="8,3 3,3 3,8"/><polyline points="12,3 17,3 17,8"/>
+      <polyline points="8,17 3,17 3,12"/><polyline points="12,17 17,17 17,12"/>
+    </svg>
+    Salir
+  </button>
+
 </section>
 
 <!-- ═══ MODAL INTERVENCIONES (morado/amarillo) ═══ -->

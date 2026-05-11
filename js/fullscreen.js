@@ -7,41 +7,34 @@
 
   if (!container) return;
 
-  /* IDs de todos los modales que deben funcionar dentro del fullscreen */
-  const MODAL_IDS = [
+  /* Todos los modales + botón salir se mueven dentro del container en fullscreen */
+  const MOVE_IDS = [
     'intervModalOverlay',
     'faunaModalOverlay',
     'rojoModalOverlay',
     'propModalOverlay',
+    'fsExitBtn',
   ];
 
-  /* Guardamos el nodo siguiente de cada modal para restaurar el orden al salir */
-  const modalOriginalPositions = {};
+  const originalPositions = {};
 
-  function moveModalsInto() {
-    MODAL_IDS.forEach(id => {
+  function moveInto() {
+    MOVE_IDS.forEach(id => {
       const el = document.getElementById(id);
       if (!el) return;
-      /* Guardar posición original */
-      modalOriginalPositions[id] = {
-        parent:      el.parentNode,
-        nextSibling: el.nextSibling,
-      };
+      originalPositions[id] = { parent: el.parentNode, nextSibling: el.nextSibling };
       container.appendChild(el);
     });
   }
 
-  function moveModalsOut() {
-    MODAL_IDS.forEach(id => {
+  function moveOut() {
+    MOVE_IDS.forEach(id => {
       const el  = document.getElementById(id);
-      const pos = modalOriginalPositions[id];
+      const pos = originalPositions[id];
       if (!el || !pos) return;
-      /* Restaurar en la posición original */
-      if (pos.nextSibling) {
-        pos.parent.insertBefore(el, pos.nextSibling);
-      } else {
-        pos.parent.appendChild(el);
-      }
+      pos.nextSibling
+        ? pos.parent.insertBefore(el, pos.nextSibling)
+        : pos.parent.appendChild(el);
     });
   }
 
@@ -57,7 +50,7 @@
   }
 
   function enterFullscreen() {
-    moveModalsInto();   /* mover modales ANTES de pedir fullscreen */
+    moveInto();
     if (container.requestFullscreen)            container.requestFullscreen();
     else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
     else if (container.mozRequestFullScreen)    container.mozRequestFullScreen();
@@ -73,7 +66,7 @@
       container.classList.remove('fs-fallback');
       document.body.style.overflow = '';
       setUI(false);
-      moveModalsOut();
+      moveOut();
       return;
     }
     if (document.exitFullscreen)            document.exitFullscreen();
@@ -85,16 +78,15 @@
     isFull() ? exitFullscreen() : enterFullscreen();
   };
 
-  /* Sync con Escape nativo — también restaura modales */
   ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange'].forEach(ev => {
     document.addEventListener(ev, () => {
       const full = isFull();
       setUI(full);
-      if (!full) moveModalsOut();
+      if (!full) moveOut();
     });
   });
 
-  /* Tecla F en desktop */
+  /* Tecla F — desktop */
   document.addEventListener('keydown', e => {
     if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey) {
       const modal = document.querySelector(
@@ -104,20 +96,17 @@
     }
   });
 
-  /* Swipe hacia abajo para salir en móvil */
-  let touchStartY = 0;
-  let touchStartX = 0;
-
+  /* Swipe abajo — móvil */
+  let ty = 0, tx = 0;
   container.addEventListener('touchstart', e => {
     if (!isFull()) return;
-    touchStartY = e.touches[0].clientY;
-    touchStartX = e.touches[0].clientX;
+    ty = e.touches[0].clientY;
+    tx = e.touches[0].clientX;
   }, { passive: true });
-
   container.addEventListener('touchend', e => {
     if (!isFull()) return;
-    const dy = e.changedTouches[0].clientY - touchStartY;
-    const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
+    const dy = e.changedTouches[0].clientY - ty;
+    const dx = Math.abs(e.changedTouches[0].clientX - tx);
     if (dy > 80 && dx < 60) exitFullscreen();
   }, { passive: true });
 
